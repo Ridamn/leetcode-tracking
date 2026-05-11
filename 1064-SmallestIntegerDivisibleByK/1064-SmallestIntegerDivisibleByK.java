@@ -1,0 +1,14 @@
+// Last updated: 5/11/2026, 9:56:49 AM
+class Solution {
+    public int smallestRepunitDivByK(int k) {
+        if(k==1) return 1;
+        // if(k%2 == 0) return -1;
+
+        int c=0;
+        for(int i=1; i<=k; i++){
+            c = (c*10+1) % k;
+            if(c == 0) return i;
+        }
+        return -1;
+    }
+}
